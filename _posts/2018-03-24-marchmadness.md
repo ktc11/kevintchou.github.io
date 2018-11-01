@@ -13,7 +13,7 @@ This is a brief exploratory data analysis of the 2018 NCAA Men’s Basketball to
 The datasets are pulled from the Kaggle and Google Cloud NCAA ML 2018 Competition. More information and the data used can be found [here](https://www.kaggle.com/c/mens-machine-learning-competition-2018).
 
 ## File Descriptions
-```r
+``` r
 library(data.table)
 library(dplyr)
 library(plyr)
@@ -80,7 +80,7 @@ Now that we have a good idea of the data we are working with, let’s start divi
 ### Number 1 seeds
 We look at the top ten teams with most number 1 seeds entering the tournament since 1985  
 
-```r
+``` r
 setkey(teams, TeamID)
 setkey(seeds, TeamID)
 
@@ -99,7 +99,7 @@ no1_seeds_plot
 ### Regular Season Wins
 The top ten teams with the most regular season wins since 1985  
 
-```r
+``` r
 setkey(season, WTeamID)
 
 reg_wins <- season[teams][, .(Wins = .N), by = TeamName][order(-Wins)]
@@ -115,7 +115,7 @@ reg_wins_plot
 ### National Titles
 The top ten teams that have won the most national championships since 1985  
 
-```r
+``` r
 setkey(tourney, WTeamID)
 
 titles <- tourney[teams][DayNum == 154, .(Titles = .N), by = TeamName][order(-Titles)]
@@ -131,7 +131,7 @@ titles_plot
 ### Conference Titles
 The top ten teams that have won their respective conference championships since 1985  
 
-```r
+``` r
 setkey(conference_tourney, WTeamID)
 
 conf_titles <- conference_tourney[teams][DayNum == 131, .(Titles = .N), by = TeamName][order(-Titles)]
@@ -149,7 +149,7 @@ Now let’s take a look at what is going on at each level of the tournaments.
 
 ### First Round Upsets
 
-```r
+``` r
 setkey(seeds, TeamID)
 
 tourney_results <- seeds[, .(Season, WTeamID = TeamID, Winner_seed = as.numeric(substr(Seed, 2, 3)))][tourney, on = c('Season', 'WTeamID')][seeds[, .(Season, LTeamID = TeamID, Loser_seed = as.numeric(substr(Seed, 2, 3)))], on = c('Season', 'LTeamID')]
@@ -177,4 +177,3 @@ A overview of how well each seed performs at each round.
 A comparison of in-game statistics in the regular season for the winning teams against losing teams.  
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/marchmadness/regseason.jpeg" alt="regular season performance">
- 
