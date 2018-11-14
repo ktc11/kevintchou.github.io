@@ -5,7 +5,8 @@ tags: [Data Analytics]
 header:
   image: "/images/marchmadness/marchmadness.jpg"
 excerpt: A brief exploratory data analysis of the 2018 NCAA Men’s Basketball tournament dataset.
-layout: single
+toc: true
+toc_label: Table of Contents
 ---
 
 This is a brief exploratory data analysis of the 2018 NCAA Men’s Basketball tournament dataset.
