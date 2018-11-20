@@ -7,7 +7,7 @@ figure.highlight {
   position: relative;
   margin-bottom: 1em;
   background: $lighter-gray;
-  color: $base05;
+  color: #586e75;
   font-family: $monospace;
   font-size: $type-size-6;
   line-height: 1.8;
@@ -78,7 +78,7 @@ figure.highlight {
   }
   .n {
     /* Name */
-    color: $base05;
+    color: #586e75;
   }
   .o {
     /* Operator */
@@ -86,7 +86,7 @@ figure.highlight {
   }
   .p {
     /* Punctuation */
-    color: $base05;
+    color: #586e75;
   }
   .cm {
     /* Comment.Multiline */
@@ -114,7 +114,7 @@ figure.highlight {
   }
   .gh {
     /* Generic.Heading */
-    color: $base05;
+    color: #586e75;
     font-weight: bold;
   }
   .gi {
@@ -233,7 +233,7 @@ figure.highlight {
   }
   .w {
     /* Text.Whitespace */
-    color: $base05;
+    color: #586e75;
   }
   .mf {
     /* Literal.Number.Float */
