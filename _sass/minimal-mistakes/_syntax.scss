@@ -7,7 +7,7 @@ figure.highlight {
   position: relative;
   margin-bottom: 1em;
   background: $lighter-gray;
-  color: $base01;
+  color: $base05;
   font-family: $monospace;
   font-size: $type-size-6;
   line-height: 1.8;
@@ -257,7 +257,7 @@ figure.highlight {
   }
   .sc {
     /* Literal.String.Char */
-    color: $base05;
+    color: #586e75;
   }
   .sd {
     /* Literal.String.Doc */
